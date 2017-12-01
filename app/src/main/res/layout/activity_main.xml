@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RL_ID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="@color/colorPrimaryDark"
+    tools:context="cr.ac.tec.aa.proyecto_1_aa.MainActivity">
+
+
+    <include
+        android:id="@+id/toolbar_1"
+        layout="@layout/toolbar_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        />
+
+    <include
+        android:id="@+id/toolbar_2"
+        layout="@layout/toolbar_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView_fondoOscuro"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="Fondo oscuro"
+        app:srcCompat="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/imageView_icono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="Icono"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <ImageView
+        android:id="@+id/imageView_vistaPrevia"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:id="@+id/gaussBar_ID"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/HorizontalScrollView_ID"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="29dp"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:elevation="4dp"
+        android:max="5"
+        android:progress="2"
+        android:visibility="visible" />
+
+    <HorizontalScrollView
+        android:id="@+id/HorizontalScrollView_ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toolbar_2"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="4dp"
+        android:scrollIndicators="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_Limite_1"
+                android:layout_width="33dp"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:visibility="invisible"
+                tools:clickable="false" />
+
+            <Button
+                android:id="@+id/button_Averaging_ID"
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:background="@drawable/averaging"
+
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:textColor="?attr/colorPrimaryDark"
+                android:textSize="12sp"
+                tools:textAlignment="gravity" />
+
+            <Button
+                android:id="@+id/button_Limite_2"
+                android:layout_width="33dp"
+                android:layout_height="37dp"
+                android:enabled="false"
+                android:textScaleX="5"
+                android:visibility="invisible"
+                tools:clickable="false" />
+
+            <Button
+                android:id="@+id/button_Desaturation_ID"
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:layout_weight="1"
+                android:background="@drawable/desaturation"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/button_Limite_3"
+                android:layout_width="33dp"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:visibility="invisible"
+                tools:clickable="false" />
+
+            <Button
+                android:id="@+id/button_Decomposition_Max_ID"
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:layout_weight="1"
+                android:background="@drawable/decomposition_max"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/button_Limite_4"
+                android:layout_width="33dp"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:visibility="invisible"
+                tools:clickable="false" />
+
+            <Button
+                android:id="@+id/button_Decomposition_Min_ID"
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:layout_weight="1"
+                android:background="@drawable/decomposition_min"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/button_Limite_5"
+                android:layout_width="33dp"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:visibility="invisible"
+                tools:clickable="false" />
+
+            <Button
+                android:id="@+id/button_GaussianBlur_ID"
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:layout_weight="1"
+                android:background="@drawable/gaussian_blur"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/button_Limite_6"
+                android:layout_width="33dp"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:visibility="invisible"
+                tools:clickable="false" />
+
+            <Button
+                android:id="@+id/button_MercaPropia_ID"
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:layout_weight="1"
+                android:background="@drawable/original"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/button_Limite_7"
+                android:layout_width="33dp"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:visibility="invisible"
+                tools:clickable="false" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

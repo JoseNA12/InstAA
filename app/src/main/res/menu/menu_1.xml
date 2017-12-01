@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_ShowOriginalImage"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:orderInCategory="100"
+        android:title="mostrar imagen original"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_InformationInstAA"
+        android:orderInCategory="300"
+        android:title="InstAA"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_Save"
+        android:icon="@drawable/ic_save"
+        android:orderInCategory="200"
+        android:title="Guardar imagen"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_ImageInfo"
+        android:icon="?attr/actionModePasteDrawable"
+        android:orderInCategory="200"
+        android:title="Informaxion Imagen"
+        android:visible="false"
+        app:showAsAction="always" />
+
+</menu>
