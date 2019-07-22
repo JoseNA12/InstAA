@@ -31,6 +31,10 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -96,6 +100,10 @@ public class MainActivity extends AppCompatActivity {
         initImageViews();
 
         CheckPermissions();
+
+        // --------- App Center --------- \\
+        AppCenter.start(getApplication(), "de8a6617-307f-49e0-9db2-c105275182d2",
+                Analytics.class, Crashes.class);
     }
 
 
